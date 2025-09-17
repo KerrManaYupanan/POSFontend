@@ -1,14 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import axios from "axios";
-import Products from './Product.js';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Products from "./Z_Product";
+import AddProduct from "./Z_AddProduct";
 
 function App() {
- return (
-    <div>
-      <h1>POS System</h1>
-      <Products />
-    </div>
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Products />} />
+        <Route path="/add" element={<AddProduct />} />
+      </Routes>
+    </Router>
   );
 }
 
